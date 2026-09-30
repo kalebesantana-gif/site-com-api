@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulte a temperatura atual de qualquer cidade.">
+    <title>ClimaNow | Temperatura Atual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-icon">☀️</div>
+                <div>
+                    <strong>ClimaNow</strong>
+                    <span>Temperatura em tempo real</span>
+                </div>
+            </div>
+            <div class="status">● API online</div>
+        </header>
+
+        <section class="hero">
+            <div>
+                <span class="eyebrow">CONSULTA METEOROLÓGICA</span>
+                <h1>Como está o clima<br><span>na sua cidade?</span></h1>
+                <p>Digite uma cidade para consultar a temperatura e as condições atuais.</p>
+            </div>
+
+            <div class="search-box">
+                <div class="input-wrap">
+                    <span>⌕</span>
+                    <input id="cidade" type="text" placeholder="Ex.: Brasília, São Paulo..." autocomplete="off">
+                </div>
+                <button id="btnPesquisar">Pesquisar</button>
+            </div>
+            <p id="mensagem" aria-live="polite"></p>
+        </section>
+
+        <section class="weather-card">
+            <div class="weather-head">
+                <div>
+                    <span class="label">AGORA</span>
+                    <h2 id="nomeCidade">Pesquise uma cidade</h2>
+                </div>
+                <div class="weather-icon" id="icone">🌤️</div>
+            </div>
+
+            <div class="main-weather">
+                <div class="temperature">
+                    <span id="temperatura">--</span><small>°C</small>
+                </div>
+                <div class="condition">
+                    <strong id="condicao">Aguardando pesquisa...</strong>
+                    <span>Temperatura atual</span>
+                </div>
+            </div>
+
+            <div class="details">
+                <div class="detail">
+                    <div class="detail-icon">🌡️</div>
+                    <div>
+                        <span>Sensação</span>
+                        <strong id="sensacao">-- °C</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <div class="detail-icon">💧</div>
+                    <div>
+                        <span>Umidade</span>
+                        <strong id="umidade">-- %</strong>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <div class="detail-icon">💨</div>
+                    <div>
+                        <span>Vento</span>
+                        <strong id="vento">-- km/h</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <span>Dados meteorológicos fornecidos por Open-Meteo</span>
+            <span>🌎 Feito com HTML, CSS e JavaScript</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
